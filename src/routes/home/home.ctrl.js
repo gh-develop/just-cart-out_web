@@ -26,6 +26,10 @@ const output = {
   1: (req, res) => {
     res.render("event1"); //login.ejs를 그림
   },
+
+  fruit: (req, res) => {
+    res.render("category"); //category.ejs를 그림
+  },
 };
 
 const process = {
