@@ -12,7 +12,7 @@ const output = {
     res.render("register"); //register.ejs를 그림
   },
 
-  detail: async (req, res) => {
+  detail: (req, res) => {
     res.render("detail"); //register.ejs를 그림
     // const detail = new Detail(req.body);
     // const response = await detail.search();
@@ -20,9 +20,9 @@ const output = {
     //res.send(response);
   },
 
-  test: (req, res) => {
-    res.render("searchpage"); //detail.ejs를 그림
-  },
+  // test: (req, res) => {
+  //   res.render("searchpage"); //detail.ejs를 그림
+  // },
 
   1: (req, res) => {
     res.render("event1"); //login.ejs를 그림
@@ -53,7 +53,7 @@ const process = {
     //res.render('detail', {'detailinfo' : response}); //detail.ejs를 그림
     //console.log(response);
     return res.json(response);
-  },
+  }
 };
 
 //ctrl 내보내기

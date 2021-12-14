@@ -13,13 +13,11 @@ class Detail {
         try {
             const { Name, Price, Desc, Location, Image } = await DetailStorage.getDetailInfo(client.searchKeyword); //await: 얘가 다 수행될때까지 기다림
             const data = { Name, Price, Desc, Location, Image};   ///////////여기까지 데이터 잘 끌어옴
-            
+            const msg_2 = Name + Price + Desc + Location + Image;
             if(Name){
-                const msg_2 = Name + Price + Desc + Location + Image;
-                console.log(msg_2);
+                //console.log(msg_2);
                 return { success: true, msg: msg_2 };
             }
-
             //return data;
             //console.log("존재하지 않는 상품!!");
             return { success: false };

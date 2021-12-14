@@ -34,7 +34,7 @@ function detail() {
                 //location.href = "/user/login";
             } else { //로그인 실패 시 실패 메세지 띄움
                 alert("존재하지 않는 상품입니다.");
-                console.log(res);
+                //console.log(res);
             }
         })
         //에러처리
