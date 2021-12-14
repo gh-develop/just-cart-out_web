@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Jua', sans-serif;
+        }
+
+        .mytitle {
+            color: black;
+            width: 300px;
+            height: 150px;
+            background-color: gold;
+            background-position: center; /*텍스트정렬*/
+            background-size: cover;
+
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .insert {
+            padding-top: 20px;
+            padding-left: 65px;
+        }
+
+        .button {
+            margin: 10px auto; /*화면 양쪽 여백 동등하게 맞춰짐(센터로감)*/
+            width: 80px;
+            height: 30px;
+            font-size: 15px;
+        }
+
+        .login_style {
+            width: 80px;
+            height: 30px;
+            font-size: 15px;
+        }
+
+        .register_style {
+
+            width: 80px;
+            height: 30px;
+            font-size: 15px;
+        }
+
+        .wrap {
+            margin: 10px auto; /*화면 양쪽 여백 동등하게 맞춰짐(센터로감)*/
+            width: 300px;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/home/login.css">
+    <script src="/js/home/register.js" defer></script>
+</head>
+
+<body>
+    <div class="login-page">
+        <div class="form">
+          <form class="login-form">
+            <input id="id" type="text" placeholder="아이디"/>
+            <input id="psword" type="password" placeholder="비밀번호"/>
+            <input id="confirm-psword" type="password" placeholder="비밀번호 확인"/>
+            <input id="name" type="text" placeholder="이름"/>
+            <input id="email" type="text" placeholder="이메일"/>
+            <p id="button">회원가입</p>
+            <p class="message">Already registered? <a href="/user/login">login</a></p>
+          </form>
+        </div>
+      </div>
+</body>
+</html>
+
+<!--Copyright (c) 2021 by Aigars Silkalns (https://codepen.io/colorlib/pen/rxddKy)-->
+
