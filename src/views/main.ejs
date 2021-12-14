@@ -76,18 +76,17 @@
               <a class="nav-link" href="/user/login">login</a>
             </li>
           </ul>
-
+          
           <!-- 검색영역 -->
-          <form class="d-flex">
+          <form action="/goods/search_post" method="post" class="d-flex">
             <input
               class="form-control me-2"
-              type="search"
+              type="text"
+              name="keyword"
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" href="/goods/detail" type="submit">
-              검색
-            </button>
+            <input class="btn btn-outline-success" type="submit"></p>
           </form>
         </div>
       </div>

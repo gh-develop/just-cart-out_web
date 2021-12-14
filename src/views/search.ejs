@@ -28,6 +28,11 @@
             width: 50%;
         }
 
+        .list-group{
+            margin: auto;
+            width: 50%;
+        }
+
     </style>
     <!-- <script src="/js/home/detail.js" defer></script> -->
 </head>
@@ -58,6 +63,18 @@
                 </div>
             </div>
         </nav>
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                <img src= <%= Image %> class="img-thumbnail" alt="Card image cap" width="250" height="150">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1"><%= Name %></h5>
+                    <small><%= Price %> 원</small>
+                </div>
+                <p class="mb-1"><%= Desc %></p>
+                <small><%= Location %></small>
+            </a>
+        </div>
 </body>
 
 </html>
