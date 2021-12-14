@@ -16,7 +16,7 @@ const port = 3000;
 const goodsRouter = require("./src/routes/home/goods"); //goods.js 파일에 있는 라우터들을 가져옴
 const userRouter = require("./src/routes/home/user"); //user.js 파일에 있는 라우터들을 가져옴
 const eventRouter = require("./src/routes/home/events"); // ./src/routes/home/events.js = ./src/routes/home/events와 같다 -> .js생략 가능
-
+const categoryRouter = require("./src/routes/home/category");
 //POST나 PUT으로 받을 때 안에 body데이터 쓸 수 있게 하는 미들웨어
 //app.use(express.urlencoded({extended: false}))
 //app.use(express.json())
@@ -48,6 +48,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/goods", goodsRouter);
 app.use("/user", userRouter);
 app.use("/events", eventRouter); // events경로로 들어오면 이벤트라우터로 연결
+app.use("/category", categoryRouter);
 
 // main.ejs 렌더링
 app.get("/", (req, res) => {
