@@ -54,10 +54,10 @@ app.get("/", (req, res) => {
   res.render("main");
 });
 
-// 제일 마지막에 와야함 404에러 처리
-app.use((req, res, next) => {
-  res.status(404).send("404 ERROR");
-});
+// // 제일 마지막에 와야함 404에러 처리
+// app.use((req, res, next) => {
+//   res.status(404).send("404 ERROR");
+// });
 
 //////router: 각각의 주소가 들어왔을 때 어떤 것을 응답해줄지를 설정
 /*

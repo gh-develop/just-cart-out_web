@@ -28,15 +28,15 @@ function detail() {
         body: JSON.stringify(req), //req를 JSON형태로 감싸줌
     })
         .then((res) => res.json()) //req해서 서버에서 보낸 res 받기
-        .then((res) => {
-            if(res.success){ //성공 시 루트로 이동
-                alert(res.msg);
-                //location.href = "/user/login";
-            } else { //로그인 실패 시 실패 메세지 띄움
-                alert("존재하지 않는 상품입니다.");
-                console.log(res);
-            }
-        })
+        // .then((res) => {
+        //     if(res.success){ //성공 시 루트로 이동
+        //         //alert(res.msg);
+        //         location.href = "/user/login";
+        //     } else { //로그인 실패 시 실패 메세지 띄움
+        //         alert("존재하지 않는 상품입니다.");
+        //         console.log(res);
+        //     }
+        // })
         //에러처리
         .catch((err) => {
             console.error(new Error("상세정보 업로드 중 에러 발생"));

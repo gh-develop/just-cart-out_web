@@ -13,12 +13,16 @@ const output = {
   },
 
   detail: async (req, res) => {
-    res.render("detail"); //detail.ejs를 그림
     const detail = new Detail(req.body);
     const response = await detail.search();
-    console.log(response);
+    res.render("detail", {'detailinfo' : response}); //detail.ejs를 그림
     //res.send(response);
   },
+
+  test: async (req, res) => {
+    res.render("test", {"name": "관리자"}); //detail.ejs를 그림
+  },
+
   1: (req, res) => {
     res.render("event1"); //login.ejs를 그림
   },
@@ -34,16 +38,17 @@ const process = {
   register: async (req, res) => {
     const user = new User(req.body);
     const response = await user.register();
+    //console.log(response);
     return res.json(response);
   },
 
-  // detail: async (req, res) => {
-  //     const detail = new Detail(req.body);
-  //     const response = await detail.search();
-  //     //console.log(res.json(response));
-  //     //res.send(response);
-  //     return res.json(response);
-  // }
+  detail: async (req, res) => {
+    const detail = new Detail(req.body);
+    const response = await detail.search();
+    //res.render('detail', {detailinfo : response}); //detail.ejs를 그림
+    //console.log(response);
+    return res.send(response);
+  },
 };
 
 //ctrl 내보내기

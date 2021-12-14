@@ -11,14 +11,14 @@ class Detail {
     async search() {
         const client = this.body;
         try {
-            const { Name, Price, Desc, Location, Image } = await DetailStorage.getDetailInfo(client.searchKeyword); //await: 얘가 다 수행될때까지 기다림
-            const data = { Name, Price, Desc, Location, Image};   ///////////여기까지 데이터 잘 끌어옴
+            const data = await DetailStorage.getDetailInfo(client.searchKeyword); //await: 얘가 다 수행될때까지 기다림
+            //const data = { Name, Price, Desc, Location, Image};   ///////////여기까지 데이터 잘 끌어옴
+            
             console.log(data);
-
-            return data;
+            //return data;
             //console.log("존재하지 않는 상품!!");
             //return { success: false, msg: "존재하지 않는 상품입니다." };
-            //return { success: false };
+            return data;
 
         } catch (err){
             return { success: false, msg: err };

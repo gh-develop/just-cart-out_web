@@ -59,16 +59,25 @@
                 </div>
             </div>
         </nav>
+        
+        <% for(var i = 0; i < detailinfo.length; i++) {%>
+            <p>
+                <h1><%= detailinfo[i].Name %> <%= detailinfo[i].Price %></h1>
+            </p>
+        <% } %>
+
         <div class="list-group">
+            <% for(var i = 0; i < detailinfo.length; i++) {%>
             <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                <img src="https://image.theminda.com/data/tg/image/tour/middle/201905/c8aee858ed6e8c34010fe3c4ae9be8a5.jpg" class="img-thumbnail" alt="Card image cap" width="250" height="150">
+                <img src= <%= detailinfo[i].Image %> class="img-thumbnail" alt="Card image cap" width="250" height="150">
                 <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">List group item heading</h5>
-                    <small>3 days ago</small>
+                    <h5 class="mb-1"><%= detailinfo[i].Name %></h5>
+                    <small><%= detailinfo[i].Price %></small>
                 </div>
-                <p class="mb-1">Some placeholder content in a paragraph.</p>
-                <small>And some small print.</small>
+                <p class="mb-1"><%= detailinfo[i].Desc %></p>
+                <small><%= detailinfo[i].Location %></small>
             </a>
+            <% } %>
         </div>
 </body>
 
