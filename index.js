@@ -32,7 +32,7 @@ app.use((req, res, next) => { //middleware: 요청이 라우터에 들어오기 
 // ejs: embeded java scripts 자바스크립트가 내장된 html
 // ejs파일들의 경로를 /src/views로 지정
 app.set("views", __dirname + "/src/views");
-// 타입을 ejs로 지정
+// 엔진을 ejs로 지정
 app.set("view engine", "ejs");
 
 // js 파일로 연결할 수 있게 해주는 미들웨어
