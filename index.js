@@ -30,7 +30,9 @@ app.use((req, res, next) => { //middleware: 요청이 라우터에 들어오기 
 
 //////템플릿 엔진 ejs 사용하기
 // ejs: embeded java scripts 자바스크립트가 내장된 html
+// ejs파일들의 경로를 /src/views로 지정
 app.set("views", __dirname + "/src/views");
+// 타입을 ejs로 지정
 app.set("view engine", "ejs");
 
 // js 파일로 연결할 수 있게 해주는 미들웨어
@@ -45,13 +47,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/goods", goodsRouter);
 app.use("/user", userRouter);
+app.use("/events", eventRouter); // events경로로 들어오면 이벤트라우터로 연결
 
-// 404에러 처리
-app.use((req, res, next) => {
-  res.status(404).send("404 ERROR");
-});
+// main.ejs 렌더링
 app.get("/", (req, res) => {
   res.render("main");
+});
+
+// 제일 마지막에 와야함 404에러 처리
+app.use((req, res, next) => {
+  res.status(404).send("404 ERROR");
 });
 
 //////router: 각각의 주소가 들어왔을 때 어떤 것을 응답해줄지를 설정
