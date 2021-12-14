@@ -13,14 +13,15 @@ const output = {
   },
 
   detail: async (req, res) => {
-    const detail = new Detail(req.body);
-    const response = await detail.search();
-    res.render("detail", {'detailinfo' : response}); //detail.ejs를 그림
+    res.render("detail"); //register.ejs를 그림
+    // const detail = new Detail(req.body);
+    // const response = await detail.search();
+    // res.render("detail", {'detailinfo' : response}); //detail.ejs를 그림
     //res.send(response);
   },
 
-  test: async (req, res) => {
-    res.render("test", {"name": "관리자"}); //detail.ejs를 그림
+  test: (req, res) => {
+    res.render("searchpage"); //detail.ejs를 그림
   },
 
   1: (req, res) => {
@@ -49,9 +50,9 @@ const process = {
   detail: async (req, res) => {
     const detail = new Detail(req.body);
     const response = await detail.search();
-    //res.render('detail', {detailinfo : response}); //detail.ejs를 그림
+    //res.render('detail', {'detailinfo' : response}); //detail.ejs를 그림
     //console.log(response);
-    return res.send(response);
+    return res.json(response);
   },
 };
 

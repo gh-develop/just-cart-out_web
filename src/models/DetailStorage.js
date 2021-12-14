@@ -14,7 +14,7 @@ class DetailStorage {//데이터베이스
             db.query( query ,[Name], (err, data) => {
                 //console.log(data[0]);
                 if(err) reject(`${err}`);
-                resolve(data); //배열에서 패킷만 전달
+                resolve(data[0]); //배열에서 패킷만 전달
             });
         });
     }
