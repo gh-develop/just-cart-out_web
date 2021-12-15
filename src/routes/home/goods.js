@@ -8,13 +8,10 @@ var router = express.Router();
 //ctrl 받아오기
 const ctrl = require("./home.ctrl");
 
+//detail.ejs 출력
 router.get('/detail', ctrl.output.detail);
-//router.post('/detail', ctrl.process.detail);
 
-// router.post('/email_post', function(req, res) {
-//     res.render('email.ejs', {'email' : req.body.email})
-// })
-
+//검색 시 search.ejs 출력
 router.post('/search_post', function(req, res) {
     const keyword = req.body.keyword;
     const sql = "SELECT  Name, Price, SHOPBASKET.Desc, Location, Image FROM SHOPBASKET where Name = ?;"
@@ -27,17 +24,15 @@ router.post('/search_post', function(req, res) {
     });
 })
 
-
-//router.get('/test', ctrl.output.test);
-
-// router.get("/search", (req, res) => {
-//     //var query = sanitize(url.parse(request.url, true).query.query);
-//     const sql = "SELECT  Name, Price, SHOPBASKET.Desc, Location, Image FROM SHOPBASKET where Name = '카레'";
-//     db.query(sql,(err, result, fields) => {
-//       if (err) throw err;
-//       res.send(result);
-//     });
-// });
+//check.ejs출력
+router.get("/checklist", (req, res) => {
+    const sql = "SELECT DISTINCT productName FROM CHECKLIST WHERE userID='yesong'";
+    db.query(sql, (err, result, fields) => {
+      if (err) throw err;
+      //res.send(result);
+      res.render('check.ejs',{'Name1' : result[0].productName, 'Name2' : result[1].productName, 'Name3' : result[2].productName, 'Name4' : result[3].productName})//검색어 받아옴
+    });
+});
 
 module.exports = router;
 

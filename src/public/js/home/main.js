@@ -17,6 +17,3 @@ function gotoMain() {
     location.href = "/";
 }
 
-// function gotoregister() {
-//     location.href = "/user/register";
-// }

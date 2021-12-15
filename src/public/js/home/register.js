@@ -45,6 +45,3 @@ function register() {
         });
 }
 
-// function gotoregister() {
-//     location.href = "/user/register";
-// }

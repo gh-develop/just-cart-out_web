@@ -20,19 +20,13 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
 
-    <title>상세페이지</title>
+    <title>체크리스트</title>
 
     <style>
-        .d-flex{
-            margin: auto;
-            width: 50%;
+        .form-check {
+            margin: 3em auto;
+            width: 15%;
         }
-
-        .card{ 
-            margin: 2em auto;
-            width: 50%;
-        }
-
     </style>
     <!-- <script src="/js/home/detail.js" defer></script> -->
 </head>
@@ -51,10 +45,6 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <form action="/goods/search_post" method="post" class="d-flex">
-                        <input id="search" class="form-control me-2" style="right: 50px;"  type="text" name="keyword" placeholder="찾고싶은 상품을 검색해보세요!" aria-label="Search">
-                        <input id="BtnSearch" class="btn btn-outline-success" type="submit"></p>
-                    </form>
                     <div class="navbar-nav">
                         <a id="BtnLogin" class="nav-link" href="/user/login">로그인</a>
                         <a id="BtnMypage" class="nav-link" href="#">마이페이지</a>
@@ -64,15 +54,29 @@
             </div>
         </nav>
 
-        <div class="card" style="width: 25rem;">
-            <img src= <%= Image %> class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"><%= Name %></h5>
-              <small><%= Price %> 원</small>
-              <small><%= Location %></small>
-              <p class="card-text"><%= Desc %></p>
-              <a href="#" class="btn btn-primary">체크리스트에 담기</a>
-            </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                <%= Name1 %>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+                <%= Name2 %>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+                <%= Name3 %>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+                <%= Name4 %>
+            </label>
         </div>
 </body>
 

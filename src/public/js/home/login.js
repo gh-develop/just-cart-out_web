@@ -9,7 +9,6 @@ const id = document.querySelector("#id"),
     //registerBtn = document.querySelector("#registerbtn");
 
 loginBtn.addEventListener("click", login);
-//registerBtn.addEventListener("click", gotoregister);
 
 function login() {
     const req = {
