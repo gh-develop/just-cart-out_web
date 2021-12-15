@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <title>상세페이지</title>
+
+    <style>
+        .d-flex{
+            margin: auto;
+            width: 50%;
+        }
+
+        .card{ 
+            margin: 2em auto;
+            width: 50%;
+        }
+
+    </style>
+    <!-- <script src="/js/home/detail.js" defer></script> -->
+</head>
+
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+            <div class="container-fluid" height="500">
+                <a class="navbar-brand" href="#">
+                    <img src="/img/Logo.png"
+                         alt="" width="60" height="60"
+                         class="d-inline-block align-text-top">
+                </a>
+                <a class="navbar-brand" href="/">그냥 담아</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <form action="/goods/search_post" method="post" class="d-flex">
+                        <input id="search" class="form-control me-2" style="right: 50px;"  type="text" name="keyword" placeholder="찾고싶은 상품을 검색해보세요!" aria-label="Search">
+                        <input id="BtnSearch" class="btn btn-outline-success" type="submit"></p>
+                    </form>
+                    <div class="navbar-nav">
+                        <a id="BtnLogin" class="nav-link" href="/user/login">로그인</a>
+                        <a id="BtnMypage" class="nav-link" href="#">마이페이지</a>
+                        <a id="BtnCheckList" class="nav-link" href="/goods/checklist">체크리스트</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="card" style="width: 20rem;">
+            <div class="card-body">
+              <h5 class="card-title">존재하지 않는 상품입니다.</h5>
+            </div>
+        </div>
+</body>
+
+</html>

@@ -18,9 +18,12 @@ router.post('/search_post', function(req, res) {
     db.query(sql, [keyword], (err, result, fields) => {
         if (err) throw err;
         //res.send(result);
-        //console.log(result);
-
-        res.render('search.ejs', {'Name' : result[0].Name, 'Price' : result[0].Price, 'Desc' : result[0].Desc, 'Location' : result[0].Location, 'Image' : result[0].Image})//검색어 받아옴
+        //coonsole.log(result);
+        if(JSON.stringify(result) === '[]'){
+            res.render('search_no.ejs');//검색어 받아옴
+            
+        }
+        else res.render('search.ejs', {'Name' : result[0].Name, 'Price' : result[0].Price, 'Desc' : result[0].Desc, 'Location' : result[0].Location, 'Image' : result[0].Image})//검색어 받아옴
     });
 })
 
