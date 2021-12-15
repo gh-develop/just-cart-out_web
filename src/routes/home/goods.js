@@ -27,6 +27,7 @@ router.post('/search_post', function(req, res) {
     });
 })
 
+
 //router.get('/test', ctrl.output.test);
 
 // router.get("/search", (req, res) => {
